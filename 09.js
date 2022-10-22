@@ -12,9 +12,37 @@ function pedirComida(array) {
   // pedirComida([{nombre: "Harry", dieta: "standard"}, {nombre: "Luna", dieta: 'vegan'}, {nombre: "Goyle", dieta: "standard"}])
   // retorna {standard: 2, vegan: 1}
   // Tu código aca:
-
+  let standard = 0;
+  let vegan = 0;
+  let dietas = array.map(function(i){
+    if (i.dieta == "standard") {
+      standard ++;
+    }else if(i.dieta == "vegan"){
+      vegan ++;
+    }
+  });
+  return {
+    standard: standard,
+    vegan: vegan
+  };
 }
 
 // No modifiques nada debajo de esta linea //
 
 module.exports = pedirComida
+
+
+
+// const integrantes = [{nombre: "Harry", dieta: "standard"}, {nombre: "Luna", dieta: 'vegan'}, {nombre: "Goyle", dieta: "standard"}];
+// let standard = 0;
+// let vegan = 0;
+// let dietas = integrantes.map(function(i){
+//   if (i.dieta == "standard") {
+//     standard ++;
+//   }else if(i.dieta == "vegan"){
+//     vegan ++;
+//   }
+// });
+
+// console.log(standard, vegan);
+

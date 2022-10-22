@@ -12,26 +12,36 @@ function crearClaseMascota() {
       //[{actividad: 'salir a caminar', frecuencia: '1 vez al dia'}, {actividad: 'baño', frecuencia: '1 vez al mes'}]
       // Inicializar las propiedades de la mascota con los valores recibidos como argumento
       // Tu código aca:
-
+      this.nombre = nombre;
+      this.dueño = dueño;
+      this.actividades = actividades;
     }
 
     getNombre() {
       // este método debe retornar el nombre de la mascota.
       // Tu código aca:
-
+      return this.nombre;
     }
 
     getDueño() {
       // El método debe retornar nombre y apellido del dueño (concatenados).
       // Tu código aca:
-    
-    }
+      let nombreDueño = this.dueño.nombre;
+      let apellidoDueño = this.dueño.apellido;
+            //No me funcionaron los template literals.
 
+      let nombreCompleto = nombreDueño + " " + apellidoDueño; 
+      return nombreCompleto;
+    }
+     //??????????
     addActividad(actividad, frecuencia) {
       // El método recibe un string 'actividad' y otro string 'frecuencia'  y debe agregarlo al arreglo de actividades de la mascota.
       // No debe retornar nada.
       // Tu código aca:
-
+      let nuevaActividad = {};
+      nuevaActividad.actividad = actividad;
+      nuevaActividad.frecuencia = frecuencia;
+      this.actividades.push(nuevaActividad);
     }
 
     getActividades() {
@@ -40,7 +50,10 @@ function crearClaseMascota() {
       // [{actividad: 'salir a caminar', frecuencia: '1 vez al dia'}, {actividad: 'baño', frecuencia: '1 vez al mes'}]
       // mascotas.getActividades() debería devolver ['salir a caminar, 'baño']
       // Tu código aca:
-     
+        let soloActividades = this.actividades.map(function(i){
+          return i.actividad;
+        });
+        return soloActividades;
     }
 
     getFrecuencia(actividad) {
@@ -49,7 +62,11 @@ function crearClaseMascota() {
       // [{actividad: 'salir a caminar', frecuencia: '1 vez al dia'}, {actividad: 'baño', frecuencia: '1 vez al mes'}]
       // mascotas.getFrecuencia('baño') debería devolver '1 vez al mes'
       // Tu código aca:
-      
+      for (let i = 0; i <= this.actividades.length; i++) {
+        if(this.actividades[i].actividad == actividad){
+          return this.actividades[i].frecuencia;
+        }
+      }
     }
   }
 
