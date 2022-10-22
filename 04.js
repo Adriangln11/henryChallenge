@@ -9,7 +9,8 @@ function doble(array) {
   // ej:
   //doble([1, 2, 3]) devuelve [2, 4, 6]
   // Tu código aca:
-
+  let arrayPorDos = array.map(i => i * 2);
+  return arrayPorDos;
 }
 
 // No modifiques nada debajo de esta linea //

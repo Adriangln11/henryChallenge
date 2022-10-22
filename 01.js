@@ -11,7 +11,8 @@ function palabrasAFrase(array) {
   // palabrasAFrase(['Dobby', 'loves', 'socks!]) debe retornar 'Dobby loves socks!'
   // sin espacios ni antes ni después es decir así no => " Dobby loves socks! "
   // Tu código aca:
-  
+  let frase = array.join(" ");
+  return frase;
 }
 
 // No modifiques nada debajo de esta linea //

@@ -25,10 +25,22 @@ function cuantosMenores(invitados) {
   // };
   // cuantosMenores(invitados) devuelve 2
   // Tu código aca:
-
+    let listaDeMenores = 0;
+    let arrayDeEdades = Object.values(invitados);
+    for (let i = 0; i < arrayDeEdades.length; i++) {
+      if(arrayDeEdades[i].edad <= 17){
+      listaDeMenores ++;
+    }
+  }
+    return listaDeMenores;
+  
 }
 
 
 // No modifiques nada debajo de esta linea //
 
 module.exports = cuantosMenores
+
+
+    
+  

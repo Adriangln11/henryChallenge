@@ -12,9 +12,19 @@ function fakeBinary2(string) {
   // fakeBinary2('5627') devuelve "1101"
   // fakeBinary("729") devuelve "101"
   // Tu código aca:
-
-}
+  
+  let arrayNumeros = string.split("");
+  let arrayBinario = arrayNumeros.map(function(i){
+    if(i < 5){
+      return 0;
+    }else if(i >= 5){
+      return 1;
+    }
+  });
+  return arrayBinario.join("");
+} 
 
 // No modifiques nada debajo de esta linea //
 
 module.exports = fakeBinary2
+
