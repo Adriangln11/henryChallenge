@@ -28,8 +28,6 @@ function crearClaseMascota() {
       // Tu código aca:
       let nombreDueño = this.dueño.nombre;
       let apellidoDueño = this.dueño.apellido;
-            //No me funcionaron los template literals.
-
       let nombreCompleto = nombreDueño + " " + apellidoDueño; 
       return nombreCompleto;
     }
